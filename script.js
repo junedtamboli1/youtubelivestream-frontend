@@ -2,6 +2,8 @@
 const apiKey = 'AIzaSyAcyUkVNyx2vBlpnx-GDSX3kua_6wfNjo0';
 const channelId = 'UCVTOPLNZHSQZj6qrzQ5qTug';
 
+const PORT = process.env.PORT || "https://youtubelivestream-backend.onrender.com";
+
 function onYouTubeIframeAPIReady() {
     //console.log('hitin')
     fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=1&type=video&eventType=live`)
